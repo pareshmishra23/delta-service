@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn clean install
+        run: mvn -B clean install
 
       - name: Run Tests
         run: mvn test
