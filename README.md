@@ -1,3 +1,5 @@
+![Java CI with Maven](https://github.com/pareshmishra23/delta-service/actions/workflows/maven.yml/badge.svg)
+
 # Delta Service
 
 A Spring Boot microservice for reading daily data and persisting it. This also supports dynamic API provisioning (Part B).
