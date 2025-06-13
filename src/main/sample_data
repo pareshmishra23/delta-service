@@ -1,0 +1,208 @@
+[
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-01-01",
+     "actionType": "Bonus",
+     "ratio": "1:1",
+     "faceValue": 1.0,
+     "recordDate": "2024-01-05",
+     "exdate": "2024-01-03",
+     "remark": "Bonus declared"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-02-01",
+     "actionType": "Bonus",
+     "ratio": "2:1",
+     "faceValue": 5.0,
+     "recordDate": "2024-02-05",
+     "exdate": "2024-02-03",
+     "remark": "Updated bonus"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-03-01",
+     "actionType": "Dividend",
+     "ratio": "3:1",
+     "faceValue": 10.0,
+     "recordDate": "2024-03-05",
+     "exdate": "2024-03-03",
+     "remark": "Dividend issued"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-04-01",
+     "actionType": "Split",
+     "ratio": "1:3",
+     "faceValue": 15.0,
+     "recordDate": "2024-04-05",
+     "exdate": "2024-04-03",
+     "remark": "Stock split"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-05-01",
+     "actionType": "Dividend",
+     "ratio": "2:2",
+     "faceValue": 20.0,
+     "recordDate": "2024-05-05",
+     "exdate": "2024-05-03",
+     "remark": "Quarterly dividend"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-06-01",
+     "actionType": "Bonus",
+     "ratio": "1:2",
+     "faceValue": 25.0,
+     "recordDate": "2024-06-05",
+     "exdate": "2024-06-03",
+     "remark": "Mid-year bonus"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-07-01",
+     "actionType": "Split",
+     "ratio": "2:1",
+     "faceValue": 30.0,
+     "recordDate": "2024-07-05",
+     "exdate": "2024-07-03",
+     "remark": "Another split"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-08-01",
+     "actionType": "Dividend",
+     "ratio": "4:1",
+     "faceValue": 35.0,
+     "recordDate": "2024-08-05",
+     "exdate": "2024-08-03",
+     "remark": "Dividend again"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-09-01",
+     "actionType": "Bonus",
+     "ratio": "1:1",
+     "faceValue": 40.0,
+     "recordDate": "2024-09-05",
+     "exdate": "2024-09-03",
+     "remark": "Bonus time"
+   },
+   {
+     "ticker": "TCS",
+     "actionDate": "2024-10-01",
+     "actionType": "Split",
+     "ratio": "5:1",
+     "faceValue": 45.0,
+     "recordDate": "2024-10-05",
+     "exdate": "2024-10-03",
+     "remark": "Final quarter split"
+   },
+
+
+
+
+
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-01-10",
+     "actionType": "Dividend",
+     "ratio": "1:1",
+     "faceValue": 1.0,
+     "recordDate": "2024-01-12",
+     "exdate": "2024-01-11",
+     "remark": "Initial dividend"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-02-10",
+     "actionType": "Bonus",
+     "ratio": "2:1",
+     "faceValue": 4.0,
+     "recordDate": "2024-02-12",
+     "exdate": "2024-02-11",
+     "remark": "Early bonus"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-03-10",
+     "actionType": "Split",
+     "ratio": "1:2",
+     "faceValue": 6.0,
+     "recordDate": "2024-03-12",
+     "exdate": "2024-03-11",
+     "remark": "Stock split"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-04-10",
+     "actionType": "Dividend",
+     "ratio": "3:1",
+     "faceValue": 9.0,
+     "recordDate": "2024-04-12",
+     "exdate": "2024-04-11",
+     "remark": "Dividend declared"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-05-10",
+     "actionType": "Bonus",
+     "ratio": "1:1",
+     "faceValue": 11.0,
+     "recordDate": "2024-05-12",
+     "exdate": "2024-05-11",
+     "remark": "Regular bonus"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-06-10",
+     "actionType": "Dividend",
+     "ratio": "2:1",
+     "faceValue": 13.0,
+     "recordDate": "2024-06-12",
+     "exdate": "2024-06-11",
+     "remark": "Half yearly"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-07-10",
+     "actionType": "Split",
+     "ratio": "2:1",
+     "faceValue": 15.0,
+     "recordDate": "2024-07-12",
+     "exdate": "2024-07-11",
+     "remark": "Another split"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-08-10",
+     "actionType": "Bonus",
+     "ratio": "3:1",
+     "faceValue": 17.0,
+     "recordDate": "2024-08-12",
+     "exdate": "2024-08-11",
+     "remark": "Annual bonus"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-09-10",
+     "actionType": "Dividend",
+     "ratio": "4:1",
+     "faceValue": 19.0,
+     "recordDate": "2024-09-12",
+     "exdate": "2024-09-11",
+     "remark": "Last dividend"
+   },
+   {
+     "ticker": "INFY",
+     "actionDate": "2024-10-10",
+     "actionType": "Split",
+     "ratio": "1:5",
+     "faceValue": 20.0,
+     "recordDate": "2024-10-12",
+     "exdate": "2024-10-11",
+     "remark": "End of year split"
+   }
+
+]

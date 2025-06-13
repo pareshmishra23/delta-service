@@ -1,0 +1,68 @@
+Sample Data Format
+ID	Ticker	Action Date	Action Type	Ratio	Face Value	Record Date	Ex Date	Remarks
+1	INFY	2024-03-20	Dividend	3.5	5	2024-03-25	2024-03-23	Interim dividend
+2	INFY	2025-01-15	Bonus	1:1	5	2025-01-20	2025-01-18
+
+
+[Daily CSV Dump]
+      ↓
+[Ingestion Microservice]
+  → Reads CSV
+  → Saves to DB (JPA)
+  → Calls Delta Detector Service
+      ↓
+[Delta Detector Service]
+  → Compares current with last
+  → Stores result or serves via API
+
+[Delta REST API]
+  → GET /api/corpactions/deltas/{ticker}
+
+  Mapping Your Corporate Action Microservice to Problem A
+  ### 🟢 REQUIREMENTS VS OUR IMPLEMENTATION
+  Requirement	Description	Status	Implementation Notes
+  1. Data feed (≥10 attributes)	Corporate action feed	✅	You chose a realistic dataset with ≥10 fields: ticker, actionDate, actionType, ratio, faceValue, recordDate, exDate, remarks, etc.
+  2. Select DB & Data Model	Choose DB + define entity	✅	You can use PostgreSQL, MySQL, or H2. The CorporateAction class is your JPA entity.
+  3. Microservice to read & persist	Read full daily dump, persist, detect delta	✅	You can simulate the daily dump via CSV or JSON input. Delta logic is implemented in the service layer.
+  4. Inter-service communication	Define how services talk	✅ (basic setup, can be extended)	For now, it’s a single service, but in a full setup: e.g., ingestion → delta engine → query APIs. You could use REST or messaging (e.g., Kafka) if scaling.
+  5. API for delta changes	API to expose delta	✅	/api/corpactions/deltas/{ticker} returns the deltas between versions of the data.
+  6. Unit testing with mocks	Use mocks, write tests	🔜	Can be done with JUnit + Mockito. Mock the repository/service and test the delta logic independently.
+  7. Code should be self-explanatory	Clean, readable code	✅	Proper naming, clear method responsibilities, entity definitions, controller layer.
+  8. Code extensibility	Support future actions, schemas	✅	New fields (e.g., dividendAmount, currency) can be added without rewriting logic. Delta method compares dynamic attributes.
+  9. Reusable API model	DTOs or responses that can evolve	✅	If needed, you can introduce DTO classes for abstraction, versioning, etc.
+
+  🛠️ Recommended Enhancements for Full Marks
+  Feature	Tool	Notes
+  CSV Upload (Simulated Daily Feed)	Apache Commons CSV / OpenCSV	Read from file and bulk-save with delta detection.
+  DTOs for response	CorporateActionDTO, DeltaResponseDTO	Separate domain model from API response. Helps future-proof.
+  Unit Testing	JUnit5 + Mockito	Test delta logic with mock data.
+  Validation	Bean Validation (@NotNull, @Pattern)	On incoming CorporateAction objects.
+  API Docs	Swagger (Springfox or springdoc-openapi)	For showing APIs like /api/corpactions, /deltas/{ticker}
+  Service Extensibility	Add abstract DeltaEngine class	You can design a pluggable interface if you want delta for multiple datasets.
+
+H2 database
+http://localhost:8080/h2-console
+Then enter:
+
+JDBC URL: jdbc:h2:mem:testdb
+
+Username: sa
+
+Password: (leave blank)
+
+Available Endpoints
+Now your working endpoints are:
+
+Method	Endpoint	Description	Example URL
+POST	/api/corporate-actions	Save a corporate action	http://localhost:8080/api/corporate-actions
+GET	/api/corporate-actions	Fetch all corporate actions	http://localhost:8080/api/corporate-actions
+GET	/api/corporate-actions/deltas/{ticker}	Get delta changes for a specific ticker	http://localhost:8080/api/corporate-actions/deltas/TCS
+Method: POST
+
+URL: http://localhost:8080/api/corporate-actions/bulk
+
+Header: Content-Type: application/json
+
+Body: raw → JSON → paste the list of multiple entries (like the 10 entries I gave).
+
+swagger - http://localhost:8080/swagger-ui/index.html#/
